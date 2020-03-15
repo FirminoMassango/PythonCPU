@@ -6,7 +6,14 @@ from variaveis import *
 
 class Processador(object):
     def __init__(self,inst):
-        # pack
+
+        # Imagem
+        imagem = PhotoImage(file='cpu.gif')
+        self.imagemUser = Label(inst, image=imagem)#, bg='#4B0082')
+        self.imagemUser.image = imagem
+        self.imagemUser.pack()
+
+        #Rótulos
         self.lbProcessador = Label(inst, text = 'Processador: ')
         self.lbArquitectura = Label(inst, text = 'Arquitectura: ')
         self.lbBits = Label(inst, text = 'Bits: ')

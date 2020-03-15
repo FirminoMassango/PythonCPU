@@ -1,0 +1,2 @@
+Na Linha de comando execute o ficheiro principal.py
+
