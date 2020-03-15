@@ -9,33 +9,33 @@ class Processador(object):
 
         # Imagem
         imagem = PhotoImage(file='cpu.gif')
-        self.imagemUser = Label(inst, image=imagem)#, bg='#4B0082')
-        self.imagemUser.image = imagem
-        self.imagemUser.pack()
+        self.imagemIcon = Label(inst, image=imagem, bg = 'white')
+        self.imagemIcon.image = imagem
+        self.imagemIcon.pack()
 
         #Rótulos
-        self.lbProcessador = Label(inst, text = 'Processador: ')
-        self.lbArquitectura = Label(inst, text = 'Arquitectura: ')
-        self.lbBits = Label(inst, text = 'Bits: ')
-        self.lbFrequencia_disponivel = Label(inst, text = 'Frequência disponível: ')
-        self.lbFrequencia_usada = Label(inst, text = 'Frequência usada: ')
-        self.lbNr_Nucleos = Label(inst, text = 'Número de núcleos (Processador): ')
-        self.lbBateria = Label(inst, text = 'Bateria: ')
-        self.lbKernel = Label(inst, text = 'Sistema: ')
-        self.lbVersao_Kernel = Label(inst, text = 'Versão do Kernel: ')
-        self.lbUtilizador = Label(inst, text = 'Utilizador: ')
+        self.lbProcessador = Label(inst, text = 'Processador: ', bg= 'white')
+        self.lbArquitectura = Label(inst, text = 'Arquitectura: ', bg= 'white')
+        self.lbBits = Label(inst, text = 'Bits: ', bg= 'white')
+        self.lbFrequencia_disponivel = Label(inst, text = 'Frequência disponível: ', bg= 'white')
+        self.lbFrequencia_usada = Label(inst, text = 'Frequência usada: ', bg= 'white')
+        self.lbNr_Nucleos = Label(inst, text = 'Número de núcleos (Processador): ', bg= 'white')
+        self.lbBateria = Label(inst, text = 'Bateria: ', bg= 'white')
+        self.lbKernel = Label(inst, text = 'Sistema: ', bg= 'white')
+        self.lbVersao_Kernel = Label(inst, text = 'Versão do Kernel: ', bg= 'white')
+        self.lbUtilizador = Label(inst, text = 'Utilizador: ', bg= 'white')
         #self.lbUso_CPU = Label(inst, text = 'Uso do Processador: ')
 
-        self.infoProcessador = Label(inst,text = processador)
-        self.infoArquitectura = Label(inst, text = arquitectura)
-        self.infoBits = Label(inst,text = bits)
-        self.infoFrequencia_disponivel = Label(inst, text = frequencia_disponivel)
-        self.infoFrequencia_usada = Label(inst, text = frequencia_usada)
-        self.infoNr_Nucleos = Label(inst, text = nr_nucleos)
-        self.infoBateria = Label(inst, text = str(bateria)+str('%'))
-        self.infoKernel = Label(inst, text = kernel)
-        self.infoVersao_Kernel = Label(inst, text = kernel_versao)
-        self.infoUtilizador = Label(inst, text = utilizador)
+        self.infoProcessador = Label(inst,text = processador, bg= 'white')
+        self.infoArquitectura = Label(inst, text = arquitectura, bg= 'white')
+        self.infoBits = Label(inst,text = bits, bg= 'white')
+        self.infoFrequencia_disponivel = Label(inst, text = frequencia_disponivel, bg= 'white')
+        self.infoFrequencia_usada = Label(inst, text = frequencia_usada, bg= 'white')
+        self.infoNr_Nucleos = Label(inst, text = nr_nucleos, bg= 'white')
+        self.infoBateria = Label(inst, text = str(bateria)+str('%'), bg= 'white')
+        self.infoKernel = Label(inst, text = kernel, bg= 'white')
+        self.infoVersao_Kernel = Label(inst, text = kernel_versao, bg= 'white')
+        self.infoUtilizador = Label(inst, text = utilizador, bg= 'white')
         #self.infoUso_CPU = Label(inst, text='')
 
 
@@ -65,33 +65,34 @@ class Processador(object):
         self.infoUtilizador.pack()
         #self.infoUso_CPU.pack()
 
+
         #Place rótulos
 
-        self.lbProcessador.place(x = 40, y = 150)
-        self.lbArquitectura.place(x = 40, y = 180)
-        self.lbBits.place(x = 40, y = 210)
-        self.lbFrequencia_disponivel.place(x = 40, y = 240)
-        self.lbFrequencia_usada.place(x = 40, y = 270)
-        self.lbNr_Nucleos.place(x = 40, y = 300)
-        self.lbBateria.place(x = 40, y = 330)
-        self.lbKernel.place(x = 40, y = 360)
-        self.lbVersao_Kernel.place(x = 40, y = 390)
-        self.lbUtilizador.place(x = 40, y = 420)
+        self.lbProcessador.place(x = 40, y = 170)
+        self.lbArquitectura.place(x = 40, y = 200)
+        self.lbBits.place(x = 40, y = 230)
+        self.lbFrequencia_disponivel.place(x = 40, y = 270)
+        self.lbFrequencia_usada.place(x = 40, y = 300)
+        self.lbNr_Nucleos.place(x = 40, y = 330)
+        self.lbBateria.place(x = 40, y = 360)
+        self.lbKernel.place(x = 40, y = 390)
+        self.lbVersao_Kernel.place(x = 40, y = 420)
+        self.lbUtilizador.place(x = 40, y = 450)
         #self.lbUso_CPU.place(x = 40, y = 450 )
 
 
         #Place informação
 
-        self.infoProcessador.place(x =250, y = 150)
-        self.infoArquitectura.place(x =250, y = 180)
-        self.infoBits.place(x =250, y = 210)
-        self.infoFrequencia_disponivel.place(x =250, y = 240)
-        self.infoFrequencia_usada.place(x =250, y = 270)
-        self.infoNr_Nucleos.place(x =250, y = 300)
-        self.infoBateria.place(x =250, y = 330)
-        self.infoKernel.place(x =250, y = 360)
-        self.infoVersao_Kernel.place(x =250, y = 390)
-        self.infoUtilizador.place(x =250, y = 420)
+        self.infoProcessador.place(x =250, y = 170)
+        self.infoArquitectura.place(x =250, y = 200)
+        self.infoBits.place(x =250, y = 230)
+        self.infoFrequencia_disponivel.place(x =250, y = 270)
+        self.infoFrequencia_usada.place(x =250, y = 300)
+        self.infoNr_Nucleos.place(x =250, y = 330)
+        self.infoBateria.place(x =250, y = 360)
+        self.infoKernel.place(x =250, y = 390)
+        self.infoVersao_Kernel.place(x =250, y = 420)
+        self.infoUtilizador.place(x =250, y = 450)
         #self.infoUso_CPU.place(x = 250, y = 450)
 
 
@@ -102,7 +103,7 @@ class Processador(object):
 '''
 
 inst = Tk()										#Instanciando a classe Tk
-#inst['bg'] = 'gray'								#Alterando a cor do fundo
+inst['bg'] = 'white'#inst['bg'] = 'gray'								#Alterando a cor do fundo
 #ícone
 #inst.wm_iconbitmap('~/Documentos/Python/logo.ico')
 
