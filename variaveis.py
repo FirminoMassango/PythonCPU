@@ -1,6 +1,9 @@
+from math import floor
 import cpuinfo
 import platform
 import psutil
+
+
 
 
 processador = cpuinfo.get_cpu_info()['brand']
@@ -16,8 +19,7 @@ utilizador = platform.node()
 
 #psutil
 nr_nucleos = psutil.cpu_count()
-bateria = round(psutil.sensors_battery().percent)
-
+bateria = floor(psutil.sensors_battery().percent)
 
 
 
