@@ -1,2 +1,8 @@
-Na Linha de comando execute o ficheiro principal.py
+Na Linha de comando execute:
+
+python3 principal_GTK+.py
+
+    ou
+
+python3 principal_Tkinter.py
 
