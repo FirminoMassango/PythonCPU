@@ -12,29 +12,29 @@ class MyWindow(Gtk.Window):
         #Rótulos
         self.lbProcessador = Gtk.Label(label=processador)
 
-        self.lbProcessador = Gtk.Label(label='Processador: ')
-        self.lbArquitectura = Gtk.Label(label='Arquitectura: ')
-        self.lbBits = Gtk.Label(label='Bits: ')
-        self.lbFrequencia_disponivel = Gtk.Label(label='Frequência disponível: ')
-        self.lbFrequencia_usada = Gtk.Label(label='Frequência usada: ')
-        self.lbNr_Nucleos = Gtk.Label(label='Número de núcleos (Processador): ')
-        self.lbBateria = Gtk.Label(label='Bateria: ')
-        self.lbKernel = Gtk.Label(label='Sistema: ')
-        self.lbVersao_Kernel = Gtk.Label(label='Versão do Kernel: ')
-        self.lbUtilizador = Gtk.Label(label='Utilizador: ')
+        self.lbProcessador = Gtk.Label(label='Processador: ', xalign=0)
+        self.lbArquitectura = Gtk.Label(label='Arquitectura: ', xalign=0)
+        self.lbBits = Gtk.Label(label='Bits: ', xalign=0)
+        self.lbFrequencia_disponivel = Gtk.Label(label='Frequência disponível: ', xalign=0)
+        self.lbFrequencia_usada = Gtk.Label(label='Frequência usada: ', xalign=0)
+        self.lbNr_Nucleos = Gtk.Label(label='Número de núcleos (Processador): ', xalign=0)
+        self.lbBateria = Gtk.Label(label='Bateria: ', xalign=0)
+        self.lbKernel = Gtk.Label(label='Sistema: ', xalign=0)
+        self.lbVersao_Kernel = Gtk.Label(label='Versão do Kernel: ', xalign=0)
+        self.lbUtilizador = Gtk.Label(label='Utilizador: ', xalign=0)
         # self.lbUso_CPU = Label(inst, text = 'Uso do Processador: ')
 
         # Info
-        self.infoProcessador = Gtk.Label(label=processador)
-        self.infoArquitectura = Gtk.Label(label=arquitectura)
-        self.infoBits = Gtk.Label(label=bits)
-        self.infoFrequencia_disponivel = Gtk.Label(label=frequencia_disponivel)
-        self.infoFrequencia_usada = Gtk.Label(label=frequencia_usada)
-        self.infoNr_Nucleos = Gtk.Label(label=nr_nucleos)
-        self.infoBateria = Gtk.Label(label=str(bateria) + str('%'))
-        self.infoKernel = Gtk.Label(label=kernel)
-        self.infoVersao_Kernel = Gtk.Label(label=kernel_versao)
-        self.infoUtilizador = Gtk.Label(label=utilizador)
+        self.infoProcessador = Gtk.Label(label=processador, xalign=3)
+        self.infoArquitectura = Gtk.Label(label=arquitectura, xalign=3)
+        self.infoBits = Gtk.Label(label=bits, xalign=2)
+        self.infoFrequencia_disponivel = Gtk.Label(label=frequencia_disponivel, xalign=2)
+        self.infoFrequencia_usada = Gtk.Label(label=frequencia_usada, xalign=2)
+        self.infoNr_Nucleos = Gtk.Label(label=nr_nucleos, xalign=2)
+        self.infoBateria = Gtk.Label(label=str(bateria) + str('%'), xalign=2)
+        self.infoKernel = Gtk.Label(label=kernel, xalign=2)
+        self.infoVersao_Kernel = Gtk.Label(label=kernel_versao, xalign=2)
+        self.infoUtilizador = Gtk.Label(label=utilizador, xalign=2)
 
 
 
@@ -123,6 +123,9 @@ class MyWindow(Gtk.Window):
 
 
 win = MyWindow()
+win.set_position(Gtk.WindowPosition.CENTER)
+win.set_default_size(550,600)
+win.set_resizable(False)
 win.connect("destroy", Gtk.main_quit)
 win.show_all()
 
