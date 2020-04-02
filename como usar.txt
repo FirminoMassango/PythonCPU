@@ -6,3 +6,9 @@ python3 principal_GTK+.py
 
 python3 principal_Tkinter.py
 
+
+Também é possível executar o programa a partir do comando:
+
+./info.sh 
+    ou 
+sh info.sh
